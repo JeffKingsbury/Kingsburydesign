@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeffrey Kingsbury</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="/style/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.22/dist/vanta.waves.min.js"></script>
+    <script src="https://kit.fontawesome.com/dca507abdf.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main class="w-screen h-screen flex flex-col justify-center items-center overflow-hidden" id="bg">
+
+        <span class="flex flex-row space-x-1 text-white select-none">
+        <h1 class="text-6xl font-mono">Jeffrey Kingsbury</h1>
+        <h2 class="text-2xl font-mono font-thin">Designs.</h2>
+        </span>
+
+        <span class="w-1/2 flex flex-row items-center justify-center space-x-3 mt-8">
+<ul class="text-white flex flex-row space-x-7 select-none text-xl">
+    <li class="cursor-pointer hover:scale-105 active:scale-95 transition ease-in-out hover:underline hover:animate-pulse antialiased">About</li>
+    <li class="cursor-pointer hover:scale-105 active:scale-95 transition ease-in-out hover:underline hover:animate-pulse antialiased">Contact</li>
+    <li class="cursor-pointer hover:scale-105 active:scale-95 transition ease-in-out hover:underline hover:animate-pulse antialiased">Portfolio</li>
+</ul>
+        </span>
+
+    </main>
+
+    <script>
+        VANTA.WAVES({
+            el: "#bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x222222
+        })
+    </script>
+</body>
+
+</html>
