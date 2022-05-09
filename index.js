@@ -9,7 +9,7 @@ function aboutFromHome() {
             minWidth: 200.00,
             scale: 1.00,
             scaleMobile: 1.00,
-            color: 0x222222,
+            color: 0xFFFF,
             backgroundColor: 0x0
         })
 
