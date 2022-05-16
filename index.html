@@ -14,6 +14,10 @@
     <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.22/dist/vanta.net.min.js" defer></script>
     <script src="https://kit.fontawesome.com/dca507abdf.js" crossorigin="anonymous"></script>
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/style/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/style/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/style/img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
 </head>
 
@@ -21,7 +25,7 @@
 
     <main class="w-screen h-screen flex flex-col justify-center items-center overflow-hidden absolute" id="background">
         <section id="homePage">
-            <span class="flex flex-row space-x-1 text-white select-none">
+            <span class="flex flex-row space-x-1 text-white select-none items-center justify-center">
                 <h1 class="lg:text-6xl sm:text-4xl text-2xl font-mono whitespace-nowrap">Jeffrey Kingsbury</h1>
             </span>
 
@@ -40,8 +44,28 @@
 
     <section class="w-screen h-screen hidden absolute" id="contactPage">
 
+        <div class="w-full h-full flex justify-center items-center text-white">
+            <div class="w-3/4 h-3/5 bg-black bg-opacity-50 rounded-sm ring-1 ring-zinc-700 shadow-black shadow-lg flex flex-col justify-center items-center">
+                <h1 class="text-xl">Thank you for your interest!</h1>
+                <h2>I would love to hear from you regarding any projects or positions you may have.</h2>
+                <h2>You can reach me via phone or email with the information below:</h2>
+                <hr class="ring-1 ring-white m-8 w-16">
+                <div class="p-2"><a class="font-semibold" href="mailto:jeffrey.kingsbury@icloud.com">Jeffrey.Kingsbury@icloud.com</a></div>
+                <a class="font-semibold" href="tel:14506940951">(450) 694-0951</a>
+
+                <button class="border-2 border-white font-bold p-2 m-8" onclick="closeContact()">Go back</button>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <section class="w-screen h-screen hidden absolute" id="portfolioPage">
+
         <div class="w-full h-full flex justify-center items-center">
-            <div class="w-3/4 h-3/5 bg-black bg-opacity-50 rounded-sm ring-1 ring-zinc-700 shadow-black shadow-lg flex flex-col justify-center items-center" onclick="closeContact()">
+            <div class="w-3/4 h-3/5 bg-black bg-opacity-50 rounded-sm ring-1 ring-zinc-700 shadow-black shadow-lg flex flex-col justify-center items-center" onclick="closePortfolio()">
 
 
 
@@ -51,6 +75,8 @@
         </div>
 
     </section>
+
+
 
     <script>
         VANTA.WAVES({
