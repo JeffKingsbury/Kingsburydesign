@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://kit.fontawesome.com/dca507abdf.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./Coffee Shop/img/favicon.ico" type="image/x-icon">
+
+    <title>Beans Coffee Co.</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden select-none">
+    <main class="w-screen flex flex-col">
+
+        <!--- Splash section --->
+        <div class="w-screen h-screen flex flex-row bg-cover" style="background-image:url('./img/michal-parzuchowski-ItaV89TNkks-unsplash.jpg');">
+            <div class="w-full h-full flex flex-col items-center justify-start bg-black bg-opacity-40">
+
+                <img src="./img/Beans Coffee Co-logos_white.png" class="sm:h-1/2 aspect-square" alt="Beans Coffee Co logo" draggable="false">
+
+                <ul style="font-family:pacifico; font-size: 4rem;" class="text-white flex flex-col sm:flex-row sm:space-x-10 w-full text-center items-center justify-center">
+                    <a href="#Menu" class="cursor-pointer hover:scale-105 active:scale-95 transition ease-in-out underline">Menu</a>
+                    <a href="https://github.com/JeffKingsbury/Kingsburydesign" target="_blank" class="cursor-pointer hover:scale-105 active:scale-95 transition ease-in-out underline">Github</a>
+                </ul>
+
+                <span class="flex flex-row space-x-16 m-8">
+                    <a href="https://twitter.com/search?q=%23coffee&src=typed_query&f=top" target="_blank"><img src="./img/twitter.png" alt="Twitter link" class="cursor-pointer hover:scale-105 active:scale-95 transition ease-in-out h-16" draggable="false"></a>
+                   <a href="https://www.facebook.com/groups/Coffeerocks/" target="_blank"><img src="./img/facebook.png" alt="Facebook link" class="cursor-pointer hover:scale-105 active:scale-95 transition ease-in-out h-16" draggable="false"></a>
+                </span>
+
+                <h2 class="text-white">#GiveThemTheBeans</h2>
+            </div>
+        </div>
+
+        <!-- Menu section -->
+        <section class="w-screen h-screen flex flex-row" id="Menu" style="font-family: pacifico;">
+            <div class="w-1/2 hidden sm:block h-full bg-center bg-cover" style="background-image:url('./img/mike-kenneally-zlwDJoKTuA8-unsplash.jpg') ; font-size: 6rem;">
+                <p class="underline h-full w-full bg-black bg-opacity-40 items-center justify-center text-white hidden sm:flex">Menu</p>
+            </div>
+            <div class="sm:w-1/2 w-full h-full bg-amber-900 border-l-2 border-black bg-cover overflow-x-auto text-center flex items-center justify-center" style="background-image:url('./img/peter-gargiulo-cGNCepznaV8-unsplash.jpg') ;">
+
+                <ul class="text-white text-xl space-y-5 py-6">
+                    <p class="underline h-full w-full bg-black bg-opacity-40 flex items-center justify-center text-white text-6xl sm:hidden mb-10">Menu</p>
+
+                    <li style="font-size:2rem;" class="underline m-4">Coffee</li>
+                    <li>&bull; Espresso - 2.99$</li>
+                    <li>&bull; Double espresso - 5.50$</li>
+                    <li>&bull; Affogato - 12.99$</li>
+                    <li>&bull; Americano - 9.00$</li>
+                    <li>&bull; Latte - 8.95$</li>
+                    <li>&bull; Cappuccino - 11.00$</li>
+                    <li>&bull; Flat white - 7.50$</li>
+                    <li>&bull; Drip - 0.10$</li>
+
+                    <li style="font-size:2rem;" class="underline">Food</li>
+                    <li>&bull; Croissant - 3.00$</li>
+                    <li>&bull; Chocolatine - 2.50$</li>
+                    <li>&bull; Muffin - 2.00$</li>
+                    <li>&bull; Cake Lollipop - 1.00$</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <footer class="bg-black h-60 w-screen flex flex-col text-white py-6">
+            <div class="w-screen h-5/6 flex flex-row">
+                <div class="w-1/2 h-full flex flex-col items-center justify-center select-text">
+                    <p class="underline">Contact:</p>
+
+                    <a href="mailto:jeffrey.kingsbury@icloud.com">Jeffrey.Kingsbury@icloud.com</a>
+                    <a href="tel:14506940951">(450) 694-0951</a>
+                </div>
+                <div class="w-1/2 h-full flex justify-center items-center">
+                    <span class="flex flex-row space-x-5 m-8">
+                    <a href="https://twitter.com/search?q=%23coffee&src=typed_query&f=top" target="_blank"><img src="./img/twitter.png" alt="Twitter link" class="cursor-pointer hover:scale-105 active:scale-95 transition ease-in-out h-16" draggable="false"></a>
+                   <a href="https://www.facebook.com/groups/Coffeerocks/" target="_blank"><img src="./img/facebook.png" alt="Facebook link" class="cursor-pointer hover:scale-105 active:scale-95 transition ease-in-out h-16" draggable="false"></a>
+                </span>
+                </div>
+            </div>
+            <div class="w-screen h-1/6 flex items-center justify-center text-center">
+                <p>This mockup was created by Jeffrey Kingsbury. See more at <a href="https://www.kingsbury.design" target="_blank" class="underline italic">www.Kingsbury.design</a></p>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
