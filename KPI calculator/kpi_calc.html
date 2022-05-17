@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPI calculator</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/style/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/style/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/style/img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+
+    <div class="flex flex-col p-2 space-y-4" id="inputHolder">
+
+        <span class="flex flex-row space-x-4">
+            <p>Daily Dials</p>
+            <input type="number" name="dailyDials" id="dailyDials" value="0" min="0" class="shadow-md w-20 ring-1 ring-black"/> 
+            <p class="text-neutral-400">Expected: 40</p>
+        </span>
+
+        <span class="flex flex-row space-x-4">
+            <p>Customer talk time</p>
+            <input type="number" name="talkTime" id="talkTime" value="0" min="0" class="shadow-md w-20 ring-1 ring-black"/> 
+            <p class="text-neutral-400">Expected: 90 minutes</p>
+        </span>
+
+        <span class="flex flex-row space-x-4">
+            <p>New prospects connected /day</p>
+            <input type="number" name="newProspects" id="newProspects" value="0" min="0" class="shadow-md w-20 ring-1 ring-black"/> 
+            <p class="text-neutral-400">Expected: 20</p>
+        </span>
+
+        <span class="flex flex-row space-x-4">
+            <p>New accounts /month</p>
+            <input type="number" name="newAccounts" id="newAccounts" value="0" min="0" class="shadow-md w-20 ring-1 ring-black"/> 
+            <p class="text-neutral-400">Expected: 30</p>
+        </span>
+    </div>
+
+    <hr class="my-9">
+    <div class="flex flex-col p-2">
+        <span class="flex flex-row space-x-1">
+            <h1>Daily dials score:</h1>
+            <p id="ddScore">1</p>
+        </span>
+
+        <span class="flex flex-row space-x-1">
+            <h1>Talk time score:</h1>
+            <p id="ttScore">1</p>
+        </span>
+
+        <span class="flex flex-row space-x-1">
+            <h1>New prospects score:</h1>
+            <p id="npScore">1</p>
+        </span>
+
+        <span class="flex flex-row space-x-1">
+            <h1>New accounts Score:</h1>
+            <p id="naScore">1</p>
+        </span>
+
+        <hr class="my-9">
+
+        <span class="flex flex-row space-x-1 font-bold">
+            <h1>Score:</h1>
+            <p id="score">1</p>
+        </span>
+
+        <span class="flex flex-row space-x-1 font-bold">
+            <h1>Bonus:</h1>
+            <p id="bonus">0</p>
+            <p>$</p>
+        </span>
+    </div>
+</body>
+
+<script>
+    let dailyDials = 1;
+    let talkTime = 1;
+    let newProspects = 1;
+    let newAccounts = 1;
+
+    $(document).on('input change', function(e) {
+        let value = e.target.value;
+
+        switch (e.target.id) {
+            case "dailyDials":
+                if (value >= 50) {
+                    dailyDials = 5;
+                } else if (value < 50 && value >= 45) {
+                    dailyDials = 4;
+                } else if (value < 45 && value >= 40) {
+                    dailyDials = 3;
+                } else if (value < 40 && value >= 35) {
+                    dailyDials = 2;
+                } else {
+                    dailyDials = 1;
+                }
+                document.getElementById('ddScore').innerText = dailyDials;
+                break;
+
+            case "talkTime":
+                if (value >= 120) {
+                    talkTime = 5;
+                } else if (value < 120 && value >= 105) {
+                    talkTime = 4;
+                } else if (value < 105 && value >= 90) {
+                    talkTime = 3;
+                } else if (value < 90 && value >= 75) {
+                    talkTime = 2;
+                } else {
+                    talkTime = 1;
+                }
+                document.getElementById('ttScore').innerText = talkTime;
+                break;
+
+            case "newProspects":
+                if (value >= 30) {
+                    newProspects = 5;
+                } else if (value < 30 && value >= 25) {
+                    newProspects = 4;
+                } else if (value < 25 && value >= 20) {
+                    newProspects = 3;
+                } else if (value < 20 && value >= 15) {
+                    newProspects = 2;
+                } else {
+                    newProspects = 1;
+                }
+                document.getElementById('npScore').innerText = newProspects;
+                break;
+
+            case "newAccounts":
+                if (value >= 45) {
+                    newAccounts = 5;
+                } else if (value < 45 && value >= 35) {
+                    newAccounts = 4;
+                } else if (value < 35 && value >= 30) {
+                    newAccounts = 3;
+                } else if (value < 30 && value >= 25) {
+                    newAccounts = 2;
+                } else {
+                    newAccounts = 1;
+                }
+                document.getElementById('naScore').innerText = newAccounts;
+                break;
+
+            default:
+                break;
+        }
+
+        let totalScore = dailyDials + talkTime + newProspects + newAccounts;
+        let average = totalScore / 4;
+
+        document.getElementById('score').innerText = average;
+
+        if (average >= 5) {
+            document.getElementById('bonus').innerText = 1575;
+        } else if (average >= 4) {
+            document.getElementById('bonus').innerText = 1260;
+        } else if (average >= 3) {
+            document.getElementById('bonus').innerText = 1050;
+        } else if (average >= 2) {
+            document.getElementById('bonus').innerText = 420;
+        } else {
+            document.getElementById('bonus').innerText = 0;
+        }
+
+    })
+</script>
+
+</html>
