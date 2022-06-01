@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/style/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/style/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/style/img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <style>
+        .codeBox {
+            background-color: gray;
+            width: auto;
+            padding: 1rem;
+            font-weight: 600;
+        }
+        
+        code p {
+            text-indent: 2rem;
+            margin: 0;
+        }
+        
+        h3 {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Fizzbuzz:</h1>
+    <p>Create a function that iterates through 100 numbers.
+        <br>When a number is divisible by 3, print the word "Fizz".
+        <br>When a number is divisible by 5, print the word "Buzz".
+        <br>When a number is divisible by both 3 and 5, print the word "Fizzbuzz".
+    </p>
+    <h3>Code:</h3>
+    <div class="codeBox">
+        <code>
+        const fbCount = 100;<br>
+        const fizz = 3;<br>
+        const buzz = 5;<br>
+        const output = document.getElementById("output");<br><br>
+        
+        for (let x = 1; x &lt;= fbCount; x++) {<br><br>
+        
+            <p>(x % fizz == 0 && x % buzz == 0) ? output.innerHTML += `&lt;li>Fizzbuzz&lt;/li>`: null; //Divisible by fizz and buzz<br></p>
+            <p>(x % fizz == 0 && x % buzz != 0) ? output.innerHTML += `&lt;li>Fizz&lt;/li>`: null; //Divisible by Fizz<br></p>
+            <p>(x % fizz != 0 && x % buzz == 0) ? output.innerHTML += `&lt;li>Buzz&lt;/li>`: null; //Divisible by Buzz<br></p>
+            <p>(x % fizz != 0 && x % buzz != 0) ? output.innerHTML += `&lt;li>${x}&lt;/li>`: null; //Divisible by netiher. (Print number)</p><br>
+        }
+        </code>
+    </div>
+
+    <h3>Output:</h3>
+    <ul id="output">
+
+    </ul>
+</body>
+
+<script>
+    const fbCount = 100;
+    const fizz = 3;
+    const buzz = 5;
+    const output = document.getElementById("output");
+
+    for (let x = 1; x <= fbCount; x++) {
+
+        (x % fizz == 0 && x % buzz == 0) ? output.innerHTML += `<li>Fizzbuzz</li>`: null; //Divisible by fizz and buzz
+        (x % fizz == 0 && x % buzz != 0) ? output.innerHTML += `<li>Fizz</li>`: null; //Divisible by Fizz
+        (x % fizz != 0 && x % buzz == 0) ? output.innerHTML += `<li>Buzz</li>`: null; //Divisible by Buzz
+        (x % fizz != 0 && x % buzz != 0) ? output.innerHTML += `<li>${x}</li>`: null; //Divisible by netiher. (Print number)
+    }
+</script>
+
+</html>
